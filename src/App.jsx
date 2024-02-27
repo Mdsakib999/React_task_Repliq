@@ -9,6 +9,12 @@ import { TbPlaceholder } from "react-icons/tb";
 import { IoIosAddCircle } from "react-icons/io";
 import { IoMdAddCircleOutline } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
+import { MdOutlineDeleteForever } from "react-icons/md";
+import { FaMinusCircle } from "react-icons/fa";
+import { RxCrossCircled } from "react-icons/rx";
+import { LuGrab } from "react-icons/lu";
+import { GiTakeMyMoney } from "react-icons/gi";
+import { FaMoneyCheckDollar } from "react-icons/fa6";
 
 
 function App() {
@@ -80,11 +86,65 @@ function App() {
         <div>
         <CgProfile className="inline-block text-3xl"></CgProfile> <span className="text-xl font-semibold">Steve Jobs</span>
         </div>
-        <IoMdAddCircleOutline></IoMdAddCircleOutline>
+        <IoMdAddCircleOutline className="text-3xl"></IoMdAddCircleOutline>
+      </div>
+
+
+      <div className="mt-4 flex items-center">
+      <SlNote className="text-3xl "></SlNote>
+        <div className="flex items-center  border-2 ml-3 px-2 py-2 text-gray-500 text-xl rounded-t-md">
+          <p className="mr-20 ">pure white & black sleeve</p>
+          <p className="mr-12">$91.00</p>
+          <FaMinusCircle className="mr-8"></FaMinusCircle>
+          <p>1</p>
+          <IoIosAddCircle className="ml-8 mr-8 text-2xl"></IoIosAddCircle>
+          <p className="">$91.00</p>
+        </div>
+        <MdOutlineDeleteForever className=" text-3xl ml-6 text-red-600"></MdOutlineDeleteForever>
+      </div>
+      <div className=" flex items-center">
+      <SlNote className="text-3xl "></SlNote>
+        <div className="flex items-center  border-r-2 border-l-2 border-b-2 ml-3 px-2 py-2 text-gray-500 text-xl">
+          <p className="mr-28 ">Lei's Red Tab Florence</p>
+          <p className="mr-12">$45.00</p>
+          <FaMinusCircle className="mr-8"></FaMinusCircle>
+          <p>2</p>
+          <IoIosAddCircle className="ml-8 mr-8 text-2xl"></IoIosAddCircle>
+          <p className="">$90.00</p>
+        </div>
+        <MdOutlineDeleteForever className=" text-3xl ml-6 text-red-600"></MdOutlineDeleteForever>
+      </div>
+      <div className=" flex items-center">
+      <SlNote className="text-3xl "></SlNote>
+        <div className="flex items-center  border-r-2 border-l-2 border-b-2 ml-3 px-2 py-2 text-gray-500 text-xl">
+          <p className="mr-40 ">Black & Curve </p>
+          <p className="mr-12">$115.00</p>
+          <FaMinusCircle className="mr-8"></FaMinusCircle>
+          <p>1</p>
+          <IoIosAddCircle className="ml-8 mr-8 text-2xl"></IoIosAddCircle>
+          <p className="">$115.00</p>
+        </div>
+        <MdOutlineDeleteForever className=" text-3xl ml-6 text-red-600"></MdOutlineDeleteForever>
+      </div>
+      
+
+      {/* total money */}
+      <div className=" flex items-center justify-between px-5 py-3 mt-4 rounded-md bg-indigo-50 text-indigo-500">
+        <p>Products Count</p>
+        <p className="text-xl font-semibold">Total</p>
+        <p className="text-xl font-semibold">$100</p>
+      </div>
+
+      <div className="flex justify-between mt-3">
+        <button className=" px-4 py-2 rounded-md font-semibold text-xl bg-red-200 text-red-500"><RxCrossCircled className="inline text-3xl mr-2"></RxCrossCircled> Cancel</button>
+        <button className=" px-4 py-2 rounded-md font-semibold text-xl bg-indigo-50 text-indigo-500"><LuGrab className="inline text-3xl mr-2"></LuGrab> Hold</button>
+        <button className=" px-4 py-2 rounded-md font-semibold text-xl bg-indigo-50 text-indigo-500"><GiTakeMyMoney className="inline text-3xl mr-2"></GiTakeMyMoney> Discount</button>
+        <button className=" px-4 py-2 rounded-md font-semibold text-xl bg-indigo-50 text-indigo-500"><FaMoneyCheckDollar className="inline text-3xl mr-2"></FaMoneyCheckDollar> Pay Now</button>
       </div>
 
       </div>
 
+{/* section 2 */}
       <div className="w-[50%] bg-gray-100  border-l-2 ">
         {/* Product section */}
         <div className="bg-gray-50 flex items-center justify-between mb-4 px-2 py-2 shadow-lg">
