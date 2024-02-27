@@ -2,6 +2,14 @@ import "./App.css";
 import { IoMdSearch } from "react-icons/io";
 import { CiBarcode } from "react-icons/ci";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { IoReorderThreeOutline } from "react-icons/io5";
+import { SlNote } from "react-icons/sl";
+import { MdOutlineLocalShipping } from "react-icons/md";
+import { TbPlaceholder } from "react-icons/tb";
+import { IoIosAddCircle } from "react-icons/io";
+import { IoMdAddCircleOutline } from "react-icons/io";
+import { CgProfile } from "react-icons/cg";
+
 
 function App() {
   const products = [
@@ -56,8 +64,26 @@ function App() {
   ];
 
   return (
-    <div className="flex ">
-      <div className="w-[50%]">{/* Payment section */}</div>
+    <div className="flex ml-2 ">
+      <div className="w-[50%] mr-3">
+        {/* Payment section */}
+      <div className="flex mt-2">
+        <IoReorderThreeOutline className="inline-block text-5xl"></IoReorderThreeOutline>
+        <button className="inline-flex items-center justify-center px-3 bg-indigo-100 py-2 rounded font-semibold ml-5 mr-3 text-indigo-500 text-xl"><SlNote className="inline-block text-2xl mr-3"></SlNote> Note</button>
+        <button className="inline-flex items-center justify-center px-3 bg-indigo-100 py-2 rounded font-semibold ml-5 mr-3 text-indigo-500 text-xl"><MdOutlineLocalShipping className="inline-block text-3xl mr-3"></MdOutlineLocalShipping> Shipping</button>
+        <button className="inline-flex items-center justify-center px-3 bg-indigo-100 py-2 rounded font-semibold ml-5 mr-3 text-indigo-500 text-xl"><TbPlaceholder className="inline-block text-2xl mr-3"></TbPlaceholder> Hold Orders</button>
+        <button className="inline-flex items-center justify-center px-3 bg-indigo-100 py-2 rounded font-semibold ml-5 mr-3 text-indigo-500 text-xl"><IoIosAddCircle className="inline-block text-2xl mr-3"></IoIosAddCircle> New Item</button>
+
+      </div>
+
+      <div className=" flex items-center justify-between px-5 py-3 mt-4 rounded-md bg-indigo-50 text-indigo-500">
+        <div>
+        <CgProfile className="inline-block text-3xl"></CgProfile> <span className="text-xl font-semibold">Steve Jobs</span>
+        </div>
+        <IoMdAddCircleOutline></IoMdAddCircleOutline>
+      </div>
+
+      </div>
 
       <div className="w-[50%] bg-gray-100  border-l-2 ">
         {/* Product section */}
