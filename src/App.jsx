@@ -94,7 +94,6 @@ function App() {
     setSelectedProducts(prevProducts => {
       return prevProducts.map(product => {
         if (product.id === id) {
-          // Increment quantity by 1
           return { ...product, quantity: product.quantity + 1 };
         }
         return product;
@@ -106,7 +105,6 @@ function App() {
     setSelectedProducts(prevProducts => {
       return prevProducts.map(product => {
         if (product.id === id && product.quantity > 1) {
-          // Decrement quantity by 1 if greater than 1
           return { ...product, quantity: product.quantity - 1 };
         }
         return product;
@@ -240,7 +238,7 @@ function App() {
         <p style={{ display: "none" }}>Placeholder</p>
       ) : (
         <p className="text-red-500 font-bold text-center mt-8">
-          Click on a Product to Add
+          Click on a Product item to Add
         </p>
       )}
 
@@ -264,7 +262,7 @@ function App() {
           Electronics
         </button>
         <button className="border-2 border-gray-400 px-3 py-1 rounded-md mr-3 font-semibold text-gray-400">
-          {" "}
+          
           Home & Lifestyle
         </button>
         <button className="border-2 border-gray-400 px-3 py-1 rounded-md mr-3 font-semibold text-gray-400">
