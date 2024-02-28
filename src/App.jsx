@@ -82,6 +82,8 @@ function App() {
 
       </div>
 
+
+      {/* Profile info */}
       <div className=" flex items-center justify-between px-5 py-3 mt-4 rounded-md bg-indigo-50 text-indigo-500">
         <div>
         <CgProfile className="inline-block text-3xl"></CgProfile> <span className="text-xl font-semibold">Steve Jobs</span>
@@ -90,6 +92,7 @@ function App() {
       </div>
 
 
+      {/* Product details payment information */}
       <div className="mt-4 flex items-center">
       <SlNote className="text-3xl "></SlNote>
         <div className="flex items-center  border-2 ml-3 px-2 py-2 text-gray-500 text-xl rounded-t-md">
@@ -114,20 +117,39 @@ function App() {
         </div>
         <MdOutlineDeleteForever className=" text-3xl ml-6 text-red-600"></MdOutlineDeleteForever>
       </div>
-      <div className=" flex items-center">
-      <SlNote className="text-3xl "></SlNote>
-        <div className="flex items-center  border-r-2 border-l-2 border-b-2 ml-3 px-2 py-2 text-gray-500 text-xl">
-          <p className="mr-40 ">Black & Curve </p>
-          <p className="mr-12">$115.00</p>
-          <FaMinusCircle className="mr-8"></FaMinusCircle>
-          <p>1</p>
-          <IoIosAddCircle className="ml-8 mr-8 text-2xl"></IoIosAddCircle>
-          <p className="">$115.00</p>
-        </div>
-        <MdOutlineDeleteForever className=" text-3xl ml-6 text-red-600"></MdOutlineDeleteForever>
-      </div>
       
 
+      {/* tax shipping discount */}
+      <div className="flex">
+        <div className="w-[50%]"></div>
+
+        <div className="w-[45%] mt-5 ">
+          <hr />
+          <div className="flex justify-between my-2">
+            <p>Sub Total</p>
+            <p className="font-bold">$1500</p>
+          </div>
+          <hr />
+          <div className="flex justify-between my-2">
+            <p>Sub Total</p>
+            <p className="font-bold">$25.00</p>
+          </div>
+          <hr />
+          <div className="flex justify-between my-2">
+            <p>Shipping</p>
+            <p className="font-bold">$5.50</p>
+          </div>
+          <hr />
+          <div className="flex justify-between my-2">
+            <p>Discount on Cart</p>
+            <p className="font-bold">$15</p>
+          </div>
+          <hr />
+        </div>
+      </div>
+
+
+      
       {/* total money */}
       <div className=" flex items-center justify-between px-5 py-3 mt-4 rounded-md bg-indigo-50 text-indigo-500">
         <p>Products Count</p>
@@ -135,6 +157,7 @@ function App() {
         <p className="text-xl font-semibold">$100</p>
       </div>
 
+    {/* last button */}
       <div className="flex justify-between mt-3">
         <button className=" px-4 py-2 rounded-md font-semibold text-xl bg-red-200 text-red-500"><RxCrossCircled className="inline text-3xl mr-2"></RxCrossCircled> Cancel</button>
         <button className=" px-4 py-2 rounded-md font-semibold text-xl bg-indigo-50 text-indigo-500"><LuGrab className="inline text-3xl mr-2"></LuGrab> Hold</button>
@@ -144,7 +167,7 @@ function App() {
 
       </div>
 
-{/* section 2 */}
+      {/* section 2 */}
       <div className="w-[50%] bg-gray-100  border-l-2 ">
         {/* Product section */}
         <div className="bg-gray-50 flex items-center justify-between mb-4 px-2 py-2 shadow-lg">
@@ -155,17 +178,17 @@ function App() {
           <CiBarcode className="text-3xl"></CiBarcode>
         </div>
 
-        <button className="border-2 border-blue-500 px-3 py-1 rounded-md mr-4 ml-3 font-semibold text-blue-500">
+        <button className="border-2 border-blue-500 px-3 py-1 rounded-md mr-3 ml-3 font-semibold text-blue-500">
           All Categories
         </button>
-        <button className="border-2 border-gray-400 px-3 py-1 rounded-md mr-4 font-semibold text-gray-400">
+        <button className="border-2 border-gray-400 px-3 py-1 rounded-md mr-3 font-semibold text-gray-400">
           Electronics
         </button>
-        <button className="border-2 border-gray-400 px-3 py-1 rounded-md mr-4 font-semibold text-gray-400">
+        <button className="border-2 border-gray-400 px-3 py-1 rounded-md mr-3 font-semibold text-gray-400">
           {" "}
           Home & Lifestyle
         </button>
-        <button className="border-2 border-gray-400 px-3 py-1 rounded-md mr-4 font-semibold text-gray-400">
+        <button className="border-2 border-gray-400 px-3 py-1 rounded-md mr-3 font-semibold text-gray-400">
           Men Fashion
         </button>
         <button className="border-2 border-gray-400 px-3 py-1 rounded-md font-semibold text-gray-400">
@@ -173,12 +196,13 @@ function App() {
         </button>
         <BsThreeDotsVertical className="inline-block text-4xl"></BsThreeDotsVertical>
 
+        {/* Products */}
         <div className="mt-5 grid grid-cols-5 gap-x-3 gap-y-6 pb-5 ps-3 cursor-pointer">
           {
             products.map((product) => (
             <div className="border-2 border-gray-300" key={product.id}>
               <div className="">
-              <img className="h-[200px] w-full" src={product.image} alt="picture" />
+              <img className="h-[180px] w-full" src={product.image} alt="picture" />
               </div>
               <p className="text-center py-1 font-semibold text-gray-500">${product.price}</p> 
               <hr />
